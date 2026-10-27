@@ -1,0 +1,3 @@
+  cd modernslug
+  npm install
+  npm run dev
