@@ -6,6 +6,9 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: modernslug
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -13,5 +16,5 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx oxlint modernslug/
-      - run: npx oxfmt --check modernslug/
+      - run: npx oxlint
+      - run: npx oxfmt --check
