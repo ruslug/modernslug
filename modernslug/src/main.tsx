@@ -7,6 +7,7 @@ import Meetings from "./Pages/Meetings.tsx";
 import Links from "./Pages/Links.tsx";
 import Topics from "./Pages/Topics.tsx";
 import Members from "./Pages/Members.tsx";
+import Navbar from "./Components/Navbar.tsx";
 
 const root = document.getElementById("root");
 
@@ -29,6 +30,11 @@ Then add the new Route in the Routes component like this:
 
 ReactDOM.createRoot(root!).render(
   <BrowserRouter>
+
+    {/* Navbar component */}
+    <Navbar />
+
+    {/* Website pages */}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/meetings" element={<Meetings />} />

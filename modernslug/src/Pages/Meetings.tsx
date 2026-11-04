@@ -1,4 +1,4 @@
-import "./Styles/Meetings.css";
+import "./Styles/Meeting.css";
 
 function Meetings() {
   return (
