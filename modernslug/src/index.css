@@ -1,111 +1,108 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+:root{
+  /* Text */
+  --text-color: #111111;
+  --text-muted: #646e78;
+  --text-on-accent: #ffffff;
+  /* Background */
+  --bg : #dbdbdb;
+  --surface: #f2f2f2;
+  --surface-alt: #e6e6e6;
+  /* Accent */
+  --accent: #c00a06;
+  --accent-hover: #a00805;
+  --accent-bg: #f6dedd;
+  --accent-border: #8a0704;
+  /* Border */
+  --border: #111111;
+  --border-subtle: #b5b9be;
+  /* Shadow */
+  --shadow: 3px 3px 0 #111111;
+  --shadow-sm: 2px 2px 0 #111111;
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.18);
+  /* Social icons / buttons */
+  --social-bg: #ffffff;
+  --social-bg-hover: #c00a06;
+  --social-icon: #111111;
+  --social-icon-hover: #ffffff;
+  --social-border: #111111;
+  --social-shadow: 2px 2px 0 #c00a06;
+  /* Classic iOS button (nav bar buttons) */
+  --ios-grad-top:#EE4A45;
+  --ios-grad-bottom:#C00A06;
+  --ios-border:#8A0704;
+  --ios-shine:rgba(255, 255, 255, 0.30);
+  /* Inset button (action buttons / links) */
+  --inset-bg:#DBDBDB;
+  --inset-text:#111111;
+  --inset-text-hover:#C00A06;
+  --inset-shadow-dark:rgba(0, 0, 0, 0.28);
+  --inset-shadow-light:rgba(255, 255, 255, 0.85);
+  --inset-border:    #B5B9BE;
+  /* Logo */
+  --logo-primary:#C00A06;
+  --logo-secondary:#111111;
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+body{
+  margin: 10px;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text-color);
+  font-family: "Space Mono", "Courier New", ui-monospace, monospace;
+}
+
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover{ color: var(--accent-hover);}
+
+/* Dark theme: set on <html data-theme="dark"> by ThemeToggle (or the script in index.html) */
+:root[data-theme="dark"]{
+    color-scheme: dark;
+    /* Text */
+    --text-color: #f2f2f2;
+    --text-muted: #a3abb3;
+    /* Background */
+    --bg : #000000;
+    --surface: #16181b;
+    --surface-alt: #1f2226;
+    /* Accent */
+    --accent: #ff3b36;
+    --accent-hover: #ff5e5a;
+    --accent-bg: #2b0a09;
+    --accent-border: #c00a06;
+    /* Border */
+    --border: #646e78;
+    --border-subtle: #2e3338;
+    /* Shadow */
+    --shadow: 3px 3px 0 #c00a06;
+    --shadow-sm: 2px 2px 0 #c00a06;
+    --shadow-soft: 0 2px 6px rgba(255, 255, 255, 0.18);
+    /* Social icons / buttons */
+    --social-bg:#16181B;
+    --social-icon:#DBDBDB;
+    --social-border:#646E78;
+    --social-shadow:2px 2px 0 #C00A06;
+    --social-bg-hover:#C00A06;
+    --social-icon-hover:#FFFFFF;
+    /* Classic iOS button (nav bar buttons) */
+    --ios-grad-top:#E8342F;
+    --ios-grad-bottom:#B00905;
+    --ios-border:#5E0503;
+    --ios-shine:rgba(255, 255, 255, 0.22);
+    /* Inset button (action buttons / links) */
+    --inset-bg:#16181B;
+    --inset-text:#DBDBDB;
+    --inset-text-hover:#FF3B36;
+    --inset-shadow-dark:rgba(0, 0, 0, 0.85);
+    --inset-shadow-light:rgba(255, 255, 255, 0.06);
+    --inset-border:#2E3338;
+    /* Logo */
+    --logo-primary:#FF3B36;
+    --logo-secondary:#DBDBDB;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}

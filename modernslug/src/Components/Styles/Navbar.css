@@ -7,6 +7,7 @@
     border-bottom: 1px solid var(--border);
 }
 
+
 /* Main navbar layout */
 .navbar {
     display: grid;
@@ -19,7 +20,12 @@
 
 /* Website name */
 .navbar__brand {
-    color: var(--text-h);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: start;
+    line-height: 1;
+    color: var(--accent);
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -29,6 +35,7 @@
 /* Holds all the navbar buttons */
 .navbar__links {
     grid-column: 2;
+    grid-row: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -39,27 +46,48 @@
     list-style: none;
 }
 
+/* Right side of the navbar (theme switch) */
+.navbar__actions {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Removes extra spacing from each item */
 .navbar__item {
     margin: 0;
 }
 
-/* Menu button for mobile screens */
+/* Menu button for mobile screens (matches the red nav buttons) */
 .navbar__toggle {
     display: none;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border);
+    color: var(--text-on-accent);
+    background:
+        linear-gradient(to bottom, var(--ios-shine) 0%, transparent 50%),
+        linear-gradient(to bottom, var(--ios-grad-top), var(--ios-grad-bottom));
+    border: 1px solid var(--ios-border);
     border-radius: 10px;
-    background: transparent;
-    color: var(--text-h);
+    box-shadow: inset 0 1px 0 var(--ios-shine), var(--shadow-soft);
     cursor: pointer;
+    transition: filter .15s, transform .05s;
+}
+
+.navbar__toggle:active {
+    transform: translateY(1px);
+    filter: brightness(.95);
 }
 
 /* The three lines in the mobile menu button */
 .navbar__toggle-icon {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -71,6 +99,20 @@
     height: 2px;
     background: currentColor;
     border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Turns the three lines into an X when the menu is open */
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-icon span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-icon span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Shows an outline when using keyboard navigation */
@@ -85,14 +127,32 @@
     .navbar {
         display: flex;
         flex-wrap: wrap;
-        min-height: 64px;
-        padding: 10px 16px;
+        align-items: center;
+        min-height: 60px;
+        padding: 8px 16px;
+        gap: 0;
+    }
+
+    /* Smaller logo and name so they fit next to the menu button */
+    .navbar__brand {
+        font-size: 18px;
+        gap: 6px;
+    }
+
+    .navbar__brand svg {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Theme switch sits on the right, just before the menu button */
+    .navbar__actions {
+        margin-left: auto;
     }
 
     /* Shows the mobile menu button */
     .navbar__toggle {
         display: inline-flex;
-        margin-left: auto;
+        margin-left: 8px;
     }
 
     /* Hides the navbar links until the menu is opened */
@@ -101,11 +161,42 @@
         width: 100%;
         flex-direction: column;
         align-items: stretch;
-        padding: 8px 0 0;
+        gap: 10px;
+        margin: 10px 0 6px;
+        padding: 12px;
+        background: var(--surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 14px;
+        box-shadow: var(--shadow-soft);
     }
 
     /* Shows the links when the menu is opened */
     .navbar__links--open {
         display: flex;
+        animation: navbar-menu-in .18s ease-out;
+    }
+}
+
+/* Small slide-down when the mobile menu opens */
+@keyframes navbar-menu-in {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Removes animations if the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .navbar__links--open {
+        animation: none;
+    }
+
+    .navbar__toggle,
+    .navbar__toggle-icon span {
+        transition: none;
     }
 }
