@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar.tsx";
 
 const root = document.getElementById("root");
 
+
 /*
 To add more pages, import the page component and add a new Route in the Routes component. For example, to add a Meetings page:
 import Meetings from "./Pages/Meetings.tsx";
@@ -28,6 +29,7 @@ Then add the new Route in the Routes component like this:
 
 ReactDOM.createRoot(root!).render(
   <BrowserRouter>
+
     {/* Navbar component */}
     <Navbar />
 

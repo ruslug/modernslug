@@ -9,13 +9,9 @@
       // Apply the saved theme before the page draws, so there is no flash of the wrong theme
       (function () {
         var saved = null;
-        try {
-          saved = localStorage.getItem("theme");
-        } catch (e) {}
-        var dark =
-          saved === "dark" ||
-          (saved !== "light" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        try { saved = localStorage.getItem("theme"); } catch (e) {}
+        var dark = saved === "dark" ||
+          (saved !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
         document.documentElement.dataset.theme = dark ? "dark" : "light";
       })();
     </script>
