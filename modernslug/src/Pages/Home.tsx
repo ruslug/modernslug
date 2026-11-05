@@ -9,9 +9,16 @@ function Home() {
       <p>TBD</p>
 
       <h2>About RU SLUG</h2>
-      <p>SLUG is the Linux user group of Rutgers University. We are the hobbyist tech club on campus with a focus on Linux, free and open source software, and general computer related topics. We do various activities to learn about and work with tech while promoting a friendly and community oriented environment.</p>
+      <p>
+        SLUG is the Linux user group of Rutgers University. We are the hobbyist
+        tech club on campus with a focus on Linux, free and open source
+        software, and general computer related topics. We do various activities
+        to learn about and work with tech while promoting a friendly and
+        community oriented environment.
+      </p>
 
-      <br></br><br></br>
+      <br></br>
+      <br></br>
 
       <h2>E-Board</h2>
       <p>
@@ -23,9 +30,15 @@ function Home() {
       </p>
 
       <h2>Contacts</h2>
-      <p><b>Instagram: </b> rutgers_slug</p>
-      <a href="https://discord.gg/FYacZ2Jbf"><b>Discord</b></a>
-      <p><b>Email: </b>slug.rutgers[at]gmail.com</p>
+      <p>
+        <b>Instagram: </b> rutgers_slug
+      </p>
+      <a href="https://discord.gg/FYacZ2Jbf">
+        <b>Discord</b>
+      </a>
+      <p>
+        <b>Email: </b>slug.rutgers[at]gmail.com
+      </p>
     </>
   );
 }
