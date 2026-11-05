@@ -5,7 +5,6 @@ import "./index.css";
 import Home from "./Pages/Home.tsx";
 import Meetings from "./Pages/Meetings.tsx";
 import Links from "./Pages/Links.tsx";
-import Topics from "./Pages/Topics.tsx";
 import Members from "./Pages/Members.tsx";
 import Navbar from "./Components/Navbar.tsx";
 
@@ -39,7 +38,6 @@ ReactDOM.createRoot(root!).render(
       <Route path="/" element={<Home />} />
       <Route path="/meetings" element={<Meetings />} />
       <Route path="/links" element={<Links />} />
-      <Route path="/topics" element={<Topics />} />
       <Route path="/members" element={<Members />} />
     </Routes>
   </BrowserRouter>,

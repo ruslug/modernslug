@@ -9,6 +9,5 @@ export const navigationItems: NavItem[] = [
     { label: "Home", path: "/" },
     { label: "Meetings", path: "/meetings" },
     { label: "Members", path: "/members" },
-    { label: "Topics", path: "/topics" },
     { label: "Links", path: "/links" },
 ];
