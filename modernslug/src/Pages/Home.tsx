@@ -6,7 +6,7 @@ function Home() {
       <h1>RU SLUG</h1>
 
       <h2>Next Meeting:</h2>
-      <p>TBD</p>
+      <p>November 16, 2026: Scripting Workshop</p>
 
       <h2>About RU SLUG</h2>
       <p>SLUG is the Linux user group of Rutgers University. We are the hobbyist tech club on campus with a focus on Linux, free and open source software, and general computer related topics. We do various activities to learn about and work with tech while promoting a friendly and community oriented environment.</p>
