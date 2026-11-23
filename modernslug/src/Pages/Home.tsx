@@ -16,8 +16,8 @@ function Home() {
       <h2>E-Board</h2>
       <p>
         <b>President:</b> Kush Patel<br></br>
-        <b>Vice President:</b> Oli King<br></br>
-        <b>Co-Vice President:</b> Michael Fackelman<br></br>
+        <b>Vice President:</b> Michael Fackelman<br></br>
+        <b>Co-Vice President:</b> Oli King<br></br>
         <b>Secretary:</b> Harshita Sharma<br></br>
         <b>Treasurer:</b> Nisanth Nimashakavi<br></br>
       </p>
@@ -25,6 +25,7 @@ function Home() {
       <h2>Contacts</h2>
       <p><b>Instagram: </b> rutgers_slug</p>
       <a href="https://discord.gg/FYacZ2Jbf"><b>Discord</b></a>
+      <p><b>Email: </b>slug.rutgers[at]gmail.com</p>
     </>
   );
 }
