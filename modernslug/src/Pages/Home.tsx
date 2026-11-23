@@ -25,7 +25,7 @@ function Home() {
       <h2>Contacts</h2>
       <p><b>Instagram: </b> rutgers_slug</p>
       <a href="https://discord.gg/FYacZ2Jbf"><b>Discord</b></a>
-      <p><b>Email: </b>slug.rutgers[at]gmail.com</p>
+      <p><b>Email: </b>slug.rutgers@gmail.com</p>
     </>
   );
 }
