@@ -21,10 +21,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
+          # The app lives in the modernslug/ folder, not the repo root
+          cache-dependency-path: modernslug/package-lock.json
       - run: npm ci
+        working-directory: modernslug
+      # Builds into the repo-root dist/ folder (see vite.config.ts), including 404.html
       - run: npm run build
+        working-directory: modernslug
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
