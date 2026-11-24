@@ -6,7 +6,7 @@ function Home() {
       <h1>RU SLUG</h1>
 
       <h2>Next Meeting:</h2>
-      <p>TBD</p>
+      <p>TB</p>
 
       <h2>About RU SLUG</h2>
       <p>
