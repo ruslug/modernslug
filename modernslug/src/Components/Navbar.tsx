@@ -4,7 +4,6 @@ import { Link } from "react-router";
 import { navigationItems } from "../Config/Navigation";
 import NavButton from "./NavButton";
 import ThemeToggle from "./ThemeToggle";
-import Tux from "../assets/tux.svg";
 import "./Styles/Navbar.css";
 
 export default function Navbar() {
@@ -26,9 +25,8 @@ export default function Navbar() {
         <nav className="navbar" aria-label="Main navigation">
           {/* Website name that links to the home page */}
           <Link to="/" className="navbar__brand" onClick={closeMenu}>
-            <svg viewBox="-4 -4 25 25" width="48" height="48" aria-label="Logo" className="navbar__logo">
-              <use xlinkHref={Tux} />
-            </svg>
+            {/* Tux logo drawn with a CSS mask (see Navbar.css) so it looks the same in every browser */}
+            <span className="navbar__logo" aria-hidden="true"></span>
             RUSLUG
           </Link>
 
