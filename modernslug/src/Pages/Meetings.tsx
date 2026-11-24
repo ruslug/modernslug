@@ -8,6 +8,9 @@ function Meetings() {
       <div>
         <h2>Fall 2026</h2>
 
+        <h3>November 23, 2026</h3>
+        <p><b>Movie Night: WarGames</b> We will watch the movie "WarGames".</p>
+
         <h3>November 16, 2026</h3>
         <p><b>Scripting Workshop</b> Learn about what scripts are and write basic scripts in bash.</p>
 
