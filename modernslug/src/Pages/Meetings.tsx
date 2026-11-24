@@ -8,6 +8,15 @@ function Meetings() {
       <div>
         <h2>Fall 2026</h2>
 
+        <h3>November 23, 2026</h3>
+        <p><b>Movie Night: WarGames</b> We will watch the movie "WarGames".</p>
+
+        <h3>November 16, 2026</h3>
+        <p><b>Scripting Workshop</b> Learn about what scripts are and write basic scripts in bash.</p>
+
+        <h3>November 9, 2026</h3>
+        <p><b>Shell Commands and Utilities Workshop</b> Whether you are a beginner and don't know much about using the terminal and shell commands, or you have experience with these things and want to potentially learn something new, this workshop will be good for everyone.</p>
+
         <h3>October 26, 2026</h3>
         <p><b>Halloween Themed Ricing Competition + Halloween Party</b> Members' riced desktops will be judged to see who has the best riced desktop. This will also double as a halloween party with pizza. </p>
 
