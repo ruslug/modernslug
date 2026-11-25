@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 
 import "./index.css";
 import Home from "./Pages/Home.tsx";
@@ -27,7 +27,7 @@ Then add the new Route in the Routes component like this:
 */
 
 ReactDOM.createRoot(root!).render(
-  <BrowserRouter>
+  <HashRouter>
     {/* Navbar component */}
     <Navbar />
 
@@ -38,5 +38,5 @@ ReactDOM.createRoot(root!).render(
       <Route path="/links" element={<Links />} />
       <Route path="/members" element={<Members />} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
 );
