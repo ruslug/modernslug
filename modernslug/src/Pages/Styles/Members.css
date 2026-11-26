@@ -1,0 +1,9 @@
+.members__section { margin-bottom: 3.5rem; }
+
+.members__heading {
+  margin: 0 0 3rem;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
